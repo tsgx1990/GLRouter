@@ -1,28 +1,29 @@
 //
-//  ViewController.m
-//  GLRouter
+//  ViewController1.m
+//  RouterDemo
 //
 //  Created by guanglong on 2016/12/7.
 //  Copyright © 2016年 bjhl. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ViewController1.h"
 #import "UIViewController+Router.h"
 
-@interface ViewController ()
+@interface ViewController1 ()
 
 @end
 
-@implementation ViewController
+@implementation ViewController1
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    self.view.backgroundColor = [UIColor whiteColor];
+    // Do any additional setup after loading the view.
+    self.title = self.router_params[@"title"];
+    self.view.backgroundColor = [UIColor redColor];
     
     UIButton* btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.backgroundColor = [UIColor blueColor];
-    btn.frame = CGRectMake(20, 120, 160, 60);
+    btn.frame = CGRectMake(120, 120, 100, 60);
     [btn setTitle:@"跳转" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(btnPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
@@ -33,20 +34,17 @@
     [btn2 setTitle:@"撤退" forState:UIControlStateNormal];
     [btn2 addTarget:self action:@selector(btn2Pressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn2];
-
 }
 
 - (void)btnPressed:(UIButton*)sender
 {
-    [self router_openController:@"clsmap://c1/title/中国/name/lgl/age/12/height" paramsBlock:^NSDictionary *(UIViewController *controller) {
+    [self router_openController:@"router1://ViewController2/title/君子务本" paramsBlock:^NSDictionary *(UIViewController *controller) {
         
-        NSDictionary* dic = @{@"title2":@"woqu"};
+        NSDictionary* dic = @{@"title1":self.title};
         return dic;
         
     } openModeBlock:^(UIViewController *controller) {
-        UIViewController* rootController = [[UIApplication sharedApplication].delegate window].rootViewController;
-        UINavigationController* navi = [[UINavigationController alloc] initWithRootViewController:controller];
-        [rootController presentViewController:navi animated:YES completion:nil];
+        [self presentViewController:controller animated:YES completion:nil];
     }];
 }
 
@@ -60,5 +58,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc
+{
+    
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end
