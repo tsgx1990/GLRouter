@@ -7,7 +7,7 @@
 //
 
 #import "ViewController2.h"
-#import "UIViewController+Router.h"
+#import "NSObject+Router.h"
 
 @interface ViewController2 ()
 
@@ -18,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = self.router_params[@"title"];
+    
     self.view.backgroundColor = [UIColor orangeColor];
     
     UIButton* btn2 = [UIButton buttonWithType:UIButtonTypeCustom];

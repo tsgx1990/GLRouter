@@ -1,15 +1,15 @@
 //
-//  UIViewController+RouterMapping.m
-//  RouterDemo
+//  NSObject+RouterMap.m
+//  GLRouter
 //
 //  Created by guanglong on 2016/12/7.
 //  Copyright © 2016年 bjhl. All rights reserved.
 //
 
-#import "UIViewController+RouterMapping.h"
-#import "UIViewController+Router.h"
+#import "NSObject+RouterMap.h"
+#import "NSObject+Router.h"
 
-@implementation UIViewController (RouterMapping)
+@implementation NSObject (RouterMap)
 
 + (NSDictionary *)router_controllerClassMapping
 {

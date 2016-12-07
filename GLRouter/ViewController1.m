@@ -7,7 +7,7 @@
 //
 
 #import "ViewController1.h"
-#import "UIViewController+Router.h"
+#import "NSObject+Router.h"
 
 @interface ViewController1 ()
 
@@ -43,9 +43,10 @@
         NSDictionary* dic = @{@"title1":self.title};
         return dic;
         
-    } openModeBlock:^(UIViewController *controller) {
-        [self presentViewController:controller animated:YES completion:nil];
-    }];
+    } openModeBlock:nil];
+//    ^(UIViewController *controller) {
+//        [self presentViewController:controller animated:YES completion:nil];
+//    }];
 }
 
 - (void)btn2Pressed:(UIButton*)sender

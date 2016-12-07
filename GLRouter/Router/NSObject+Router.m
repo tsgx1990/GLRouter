@@ -1,23 +1,22 @@
 //
-//  UIViewController+Router.m
-//  RouterDemo
+//  NSObject+Router.m
+//  GLRouter
 //
 //  Created by guanglong on 2016/12/7.
 //  Copyright © 2016年 bjhl. All rights reserved.
 //
 
-#import "UIViewController+Router.h"
+#import "NSObject+Router.h"
 #import <objc/runtime.h>
 
-@interface UIViewController()
+@implementation NSObject (Router)
 
-@property (nonatomic, strong) NSDictionary* router_private_params;
+- (UIViewController *)router_openController:(NSString *)routerUrl paramsBlock:(NSDictionary *(^)(UIViewController *))paramsBlock openModeBlock:(void (^)(UIViewController *))openModeBlock
+{
+    return [self.class router_openController:routerUrl paramsBlock:paramsBlock openModeBlock:openModeBlock];
+}
 
-@end
-
-@implementation UIViewController (Router)
-
-- (UIViewController*)router_openController:(NSString*)routerUrl paramsBlock:(NSDictionary*(^)(UIViewController* controller))paramsBlock openModeBlock:(void(^)(UIViewController* controller))openModeBlock;
++ (UIViewController*)router_openController:(NSString*)routerUrl paramsBlock:(NSDictionary*(^)(UIViewController* controller))paramsBlock openModeBlock:(void(^)(UIViewController* controller))openModeBlock;
 {
     NSDictionary* urlParams = nil;
     Class vcClass = [self router_classForRouterUrl:routerUrl urlParams:&urlParams];
@@ -29,7 +28,11 @@
                 NSMutableDictionary* mParams = @{}.mutableCopy;
                 [mParams addEntriesFromDictionary:urlParams];
                 [mParams addEntriesFromDictionary:params];
-                controller.router_private_params = mParams;
+                
+                SEL the_sel = NSSelectorFromString(@"setRouter_private_params:");
+                Method the_mtd = class_getInstanceMethod(controller.class, the_sel);
+                void(*the_imp)(id, SEL, ...) = (void(*)(id, SEL, ...))method_getImplementation(the_mtd);
+                the_imp(controller, the_sel, mParams);
             }
         }
         if (openModeBlock) {
@@ -52,27 +55,7 @@
     return nil;
 }
 
-- (void)router_closeControllerAnimated:(BOOL)animated closeModeBlock:(void(^)())closeModeBlock;
-{
-    if (closeModeBlock) {
-        closeModeBlock();
-    }
-    else {
-        if (self.navigationController) {
-            if (self.navigationController.viewControllers.firstObject == self) {
-                [self.navigationController dismissViewControllerAnimated:animated completion:nil];
-            }
-            else {
-                [self.navigationController popViewControllerAnimated:animated];
-            }
-        }
-        else {
-            [self dismissViewControllerAnimated:animated completion:nil];
-        }
-    }
-}
-
-- (Class)router_classForRouterUrl:(NSString*)routerUrl urlParams:(NSDictionary**)urlParams
++ (Class)router_classForRouterUrl:(NSString*)routerUrl urlParams:(NSDictionary**)urlParams
 {
     if (!routerUrl.length) {
         NSLog(@"router error!!! 001_routerUrl: <%@> 错误😢", routerUrl);
@@ -124,7 +107,7 @@
     else {
         // 解析 routerUrl 中的参数
         NSArray* pathComponents = URL.pathComponents;
-//        NSLog(@"pathComponents:%@", pathComponents);
+        //        NSLog(@"pathComponents:%@", pathComponents);
         if (pathComponents.count > 2) {
             NSMutableDictionary* mDic = [NSMutableDictionary dictionaryWithCapacity:pathComponents.count/2];
             for (int i=1; i+1<pathComponents.count; i+=2) {
@@ -136,21 +119,6 @@
         }
     }
     return vcClass;
-}
-
-- (void)setRouter_private_params:(NSDictionary *)router_private_params
-{
-    objc_setAssociatedObject(self, @selector(router_private_params), router_private_params, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (NSDictionary *)router_private_params
-{
-    return objc_getAssociatedObject(self, _cmd);
-}
-
-- (NSDictionary *)router_params
-{
-    return self.router_private_params;
 }
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "UIViewController+Router.h"
+#import "NSObject+Router.h"
 
 @interface ViewController ()
 
