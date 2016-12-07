@@ -79,14 +79,14 @@
 				E7A0AA601DF83EE800BE125D /* AppDelegate.m */,
 				E7A0AA621DF83EE800BE125D /* ViewController.h */,
 				E7A0AA631DF83EE800BE125D /* ViewController.m */,
-				E7A0AA751DF83F2100BE125D /* UIViewController+RouterMapping.h */,
-				E7A0AA761DF83F2100BE125D /* UIViewController+RouterMapping.m */,
 				E7A0AA771DF83F2100BE125D /* ViewController1.h */,
 				E7A0AA781DF83F2100BE125D /* ViewController1.m */,
 				E7A0AA791DF83F2100BE125D /* ViewController2.h */,
 				E7A0AA7A1DF83F2100BE125D /* ViewController2.m */,
 				E7A0AA7B1DF83F2100BE125D /* ViewController3.h */,
 				E7A0AA7C1DF83F2100BE125D /* ViewController3.m */,
+				E7A0AA751DF83F2100BE125D /* UIViewController+RouterMapping.h */,
+				E7A0AA761DF83F2100BE125D /* UIViewController+RouterMapping.m */,
 				E7A0AA651DF83EE800BE125D /* Main.storyboard */,
 				E7A0AA681DF83EE800BE125D /* Assets.xcassets */,
 				E7A0AA6A1DF83EE800BE125D /* LaunchScreen.storyboard */,
@@ -337,6 +337,7 @@
 				E7A0AA721DF83EE800BE125D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
