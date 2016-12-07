@@ -38,7 +38,7 @@
 
 - (void)btnPressed:(UIButton*)sender
 {
-    [self router_openController:@"router1://ViewController2/title/君子务本" paramsBlock:^NSDictionary *(UIViewController *controller) {
+    [self router_openController:@"router://ViewController2/title/君子务本" paramsBlock:^NSDictionary *(UIViewController *controller) {
         
         NSDictionary* dic = @{@"title1":self.title};
         return dic;
