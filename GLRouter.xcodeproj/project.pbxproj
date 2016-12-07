@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		E77680EF1DF8660100A4F9C6 /* NSObject+RouterMap.m in Sources */ = {isa = PBXBuildFile; fileRef = E77680EE1DF8660100A4F9C6 /* NSObject+RouterMap.m */; };
 		E77680F51DF86A7E00A4F9C6 /* NSObject+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = E77680F21DF86A7E00A4F9C6 /* NSObject+Router.m */; };
-		E77680F61DF86A7E00A4F9C6 /* UIViewController+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = E77680F41DF86A7E00A4F9C6 /* UIViewController+Router.m */; };
 		E7A0AA5E1DF83EE800BE125D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A0AA5D1DF83EE800BE125D /* main.m */; };
 		E7A0AA611DF83EE800BE125D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A0AA601DF83EE800BE125D /* AppDelegate.m */; };
 		E7A0AA641DF83EE800BE125D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A0AA631DF83EE800BE125D /* ViewController.m */; };
@@ -26,8 +25,6 @@
 		E77680EE1DF8660100A4F9C6 /* NSObject+RouterMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RouterMap.m"; sourceTree = "<group>"; };
 		E77680F11DF86A7E00A4F9C6 /* NSObject+Router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Router.h"; sourceTree = "<group>"; };
 		E77680F21DF86A7E00A4F9C6 /* NSObject+Router.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Router.m"; sourceTree = "<group>"; };
-		E77680F31DF86A7E00A4F9C6 /* UIViewController+Router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Router.h"; sourceTree = "<group>"; };
-		E77680F41DF86A7E00A4F9C6 /* UIViewController+Router.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Router.m"; sourceTree = "<group>"; };
 		E7A0AA591DF83EE800BE125D /* GLRouter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLRouter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A0AA5D1DF83EE800BE125D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E7A0AA5F1DF83EE800BE125D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,8 +59,6 @@
 			children = (
 				E77680F11DF86A7E00A4F9C6 /* NSObject+Router.h */,
 				E77680F21DF86A7E00A4F9C6 /* NSObject+Router.m */,
-				E77680F31DF86A7E00A4F9C6 /* UIViewController+Router.h */,
-				E77680F41DF86A7E00A4F9C6 /* UIViewController+Router.m */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -191,7 +186,6 @@
 				E77680F51DF86A7E00A4F9C6 /* NSObject+Router.m in Sources */,
 				E7A0AA801DF83F2100BE125D /* ViewController2.m in Sources */,
 				E77680EF1DF8660100A4F9C6 /* NSObject+RouterMap.m in Sources */,
-				E77680F61DF86A7E00A4F9C6 /* UIViewController+Router.m in Sources */,
 				E7A0AA641DF83EE800BE125D /* ViewController.m in Sources */,
 				E7A0AA7F1DF83F2100BE125D /* ViewController1.m in Sources */,
 				E7A0AA611DF83EE800BE125D /* AppDelegate.m in Sources */,

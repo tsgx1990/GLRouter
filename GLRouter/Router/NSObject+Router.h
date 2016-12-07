@@ -6,8 +6,7 @@
 //  Copyright © 2016年 bjhl. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "UIViewController+Router.h"
+#import <UIKit/UIKit.h>
 
 @interface NSObject(RouterClsMap)
 
@@ -34,5 +33,17 @@
 - (UIViewController*)router_openController:(NSString*)routerUrl paramsBlock:(NSDictionary*(^)(UIViewController* controller))paramsBlock openModeBlock:(void(^)(UIViewController* controller))openModeBlock;
 
 + (UIViewController*)router_openController:(NSString*)routerUrl paramsBlock:(NSDictionary*(^)(UIViewController* controller))paramsBlock openModeBlock:(void(^)(UIViewController* controller))openModeBlock;
+
+@end
+
+@interface UIViewController (Router)
+
+@property (nonatomic, strong, readonly) NSDictionary* router_params;
+
+/*
+ closeModeBlock     用于自定义界面退出方式，当为nil时，会采用默认的退出方式
+ */
+- (void)router_closeControllerAnimated:(BOOL)animated closeModeBlock:(void(^)())closeModeBlock;
+
 
 @end
