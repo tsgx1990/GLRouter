@@ -13,7 +13,16 @@
 /*
  如果要使用clsmap:// 协议，需要实现该方法，返回类的映射关系
  */
+
+#ifdef __IPHONE_10_1
+
 @property (class, strong, readonly) NSDictionary* router_controllerClassMapping;
+
+#else
+
++ (NSDictionary*)router_controllerClassMapping;
+
+#endif
 
 @end
 

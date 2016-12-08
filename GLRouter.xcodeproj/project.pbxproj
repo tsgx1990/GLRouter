@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E7600A181DF8FCE500C07003 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7600A171DF8FCE500C07003 /* LaunchScreen.storyboard */; };
 		E77680EF1DF8660100A4F9C6 /* NSObject+RouterMap.m in Sources */ = {isa = PBXBuildFile; fileRef = E77680EE1DF8660100A4F9C6 /* NSObject+RouterMap.m */; };
 		E77680F51DF86A7E00A4F9C6 /* NSObject+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = E77680F21DF86A7E00A4F9C6 /* NSObject+Router.m */; };
 		E7A0AA5E1DF83EE800BE125D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A0AA5D1DF83EE800BE125D /* main.m */; };
 		E7A0AA611DF83EE800BE125D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A0AA601DF83EE800BE125D /* AppDelegate.m */; };
 		E7A0AA641DF83EE800BE125D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A0AA631DF83EE800BE125D /* ViewController.m */; };
-		E7A0AA671DF83EE800BE125D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7A0AA651DF83EE800BE125D /* Main.storyboard */; };
 		E7A0AA691DF83EE800BE125D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7A0AA681DF83EE800BE125D /* Assets.xcassets */; };
-		E7A0AA6C1DF83EE800BE125D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7A0AA6A1DF83EE800BE125D /* LaunchScreen.storyboard */; };
 		E7A0AA7F1DF83F2100BE125D /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A0AA781DF83F2100BE125D /* ViewController1.m */; };
 		E7A0AA801DF83F2100BE125D /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A0AA7A1DF83F2100BE125D /* ViewController2.m */; };
 		E7A0AA811DF83F2100BE125D /* ViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A0AA7C1DF83F2100BE125D /* ViewController3.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E7600A171DF8FCE500C07003 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E77680ED1DF8660100A4F9C6 /* NSObject+RouterMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RouterMap.h"; sourceTree = "<group>"; };
 		E77680EE1DF8660100A4F9C6 /* NSObject+RouterMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RouterMap.m"; sourceTree = "<group>"; };
 		E77680F11DF86A7E00A4F9C6 /* NSObject+Router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Router.h"; sourceTree = "<group>"; };
@@ -31,9 +31,7 @@
 		E7A0AA601DF83EE800BE125D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E7A0AA621DF83EE800BE125D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E7A0AA631DF83EE800BE125D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E7A0AA661DF83EE800BE125D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7A0AA681DF83EE800BE125D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E7A0AA6B1DF83EE800BE125D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7A0AA6D1DF83EE800BE125D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7A0AA771DF83F2100BE125D /* ViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController1.h; sourceTree = "<group>"; };
 		E7A0AA781DF83F2100BE125D /* ViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
@@ -95,9 +93,8 @@
 				E7A0AA7C1DF83F2100BE125D /* ViewController3.m */,
 				E77680ED1DF8660100A4F9C6 /* NSObject+RouterMap.h */,
 				E77680EE1DF8660100A4F9C6 /* NSObject+RouterMap.m */,
-				E7A0AA651DF83EE800BE125D /* Main.storyboard */,
+				E7600A171DF8FCE500C07003 /* LaunchScreen.storyboard */,
 				E7A0AA681DF83EE800BE125D /* Assets.xcassets */,
-				E7A0AA6A1DF83EE800BE125D /* LaunchScreen.storyboard */,
 				E7A0AA6D1DF83EE800BE125D /* Info.plist */,
 				E7A0AA5C1DF83EE800BE125D /* Supporting Files */,
 			);
@@ -170,9 +167,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7A0AA6C1DF83EE800BE125D /* LaunchScreen.storyboard in Resources */,
 				E7A0AA691DF83EE800BE125D /* Assets.xcassets in Resources */,
-				E7A0AA671DF83EE800BE125D /* Main.storyboard in Resources */,
+				E7600A181DF8FCE500C07003 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,25 +191,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		E7A0AA651DF83EE800BE125D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E7A0AA661DF83EE800BE125D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E7A0AA6A1DF83EE800BE125D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E7A0AA6B1DF83EE800BE125D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E7A0AA6E1DF83EE800BE125D /* Debug */ = {
@@ -309,7 +286,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GLRouter/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bjhl.GLRouter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -321,7 +298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GLRouter/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bjhl.GLRouter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
