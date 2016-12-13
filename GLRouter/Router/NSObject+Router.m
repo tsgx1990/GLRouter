@@ -17,12 +17,12 @@
 
 @implementation NSObject (Router)
 
-- (UIViewController *)router_openController:(NSString *)routerUrl paramsBlock:(NSDictionary *(^)(UIViewController *))paramsBlock openModeBlock:(void (^)(UIViewController *))openModeBlock
+- (UIViewController *)router_openController:(NSString *)routerUrl paramsBlock:(NSDictionary *(^)(UIViewController *))paramsBlock openModeBlock:(void (^)(UIViewController*, UIViewController *))openModeBlock
 {
     return [self.class router_openController:routerUrl paramsBlock:paramsBlock openModeBlock:openModeBlock];
 }
 
-+ (UIViewController*)router_openController:(NSString*)routerUrl paramsBlock:(NSDictionary*(^)(UIViewController* controller))paramsBlock openModeBlock:(void(^)(UIViewController* controller))openModeBlock;
++ (UIViewController*)router_openController:(NSString*)routerUrl paramsBlock:(NSDictionary*(^)(UIViewController* controller))paramsBlock openModeBlock:(void(^)(UIViewController* presentedController, UIViewController* targetController))openModeBlock;
 {
     NSDictionary* urlParams = nil;
     Class vcClass = [self router_classForRouterUrl:routerUrl urlParams:&urlParams];
@@ -42,14 +42,16 @@
 //                the_imp(controller, the_sel, mParams);
             }
         }
+        
+        UIViewController* presentedVC = [[UIApplication sharedApplication].delegate window].rootViewController;
+        while (presentedVC.presentedViewController) {
+            presentedVC = presentedVC.presentedViewController;
+        }
+        
         if (openModeBlock) {
-            openModeBlock(controller);
+            openModeBlock(presentedVC, controller);
         }
         else {
-            UIViewController* presentedVC = [[UIApplication sharedApplication].delegate window].rootViewController;
-            while (presentedVC.presentedViewController) {
-                presentedVC = presentedVC.presentedViewController;
-            }
             if ([presentedVC isKindOfClass:[UINavigationController class]]) {
                 [(UINavigationController*)presentedVC pushViewController:controller animated:YES];
             }

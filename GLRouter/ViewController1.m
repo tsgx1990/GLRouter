@@ -43,10 +43,10 @@
         NSDictionary* dic = @{@"title1":self.title};
         return dic;
         
-    } openModeBlock:nil];
-//    ^(UIViewController *controller) {
-//        [self presentViewController:controller animated:YES completion:nil];
-//    }];
+    } openModeBlock:^(UIViewController *presentedController, UIViewController *targetController) {
+        [self presentViewController:targetController animated:YES completion:nil];
+//        [(UINavigationController*)presentedController pushViewController:targetController animated:YES];
+    }];
 }
 
 - (void)btn2Pressed:(UIButton*)sender

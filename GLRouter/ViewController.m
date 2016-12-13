@@ -43,10 +43,9 @@
         NSDictionary* dic = @{@"title2":@"woqu"};
         return dic;
         
-    } openModeBlock:^(UIViewController *controller) {
-        UIViewController* rootController = [[UIApplication sharedApplication].delegate window].rootViewController;
-        UINavigationController* navi = [[UINavigationController alloc] initWithRootViewController:controller];
-        [rootController presentViewController:navi animated:YES completion:nil];
+    } openModeBlock:^(UIViewController *presentedController, UIViewController *targetController) {
+        UINavigationController* navi = [[UINavigationController alloc] initWithRootViewController:targetController];
+        [presentedController presentViewController:navi animated:YES completion:nil];
     }];
 }
 

@@ -14,7 +14,8 @@
  如果要使用clsmap:// 协议，需要实现该方法，返回类的映射关系
  */
 
-#ifdef __IPHONE_10_1
+//#ifdef __IPHONE_10_1
+#if UIKIT_DEFINE_AS_PROPERTIES
 
 @property (class, strong, readonly) NSDictionary* router_controllerClassMapping;
 
@@ -39,9 +40,9 @@
  
  openModeBlock  用于自定义跳转方式，当为nil时，会采用默认的跳转方式
  */
-- (UIViewController*)router_openController:(NSString*)routerUrl paramsBlock:(NSDictionary*(^)(UIViewController* controller))paramsBlock openModeBlock:(void(^)(UIViewController* controller))openModeBlock;
+- (UIViewController*)router_openController:(NSString*)routerUrl paramsBlock:(NSDictionary*(^)(UIViewController* controller))paramsBlock openModeBlock:(void(^)(UIViewController* presentedController, UIViewController* targetController))openModeBlock;
 
-+ (UIViewController*)router_openController:(NSString*)routerUrl paramsBlock:(NSDictionary*(^)(UIViewController* controller))paramsBlock openModeBlock:(void(^)(UIViewController* controller))openModeBlock;
++ (UIViewController*)router_openController:(NSString*)routerUrl paramsBlock:(NSDictionary*(^)(UIViewController* controller))paramsBlock openModeBlock:(void(^)(UIViewController* presentedController, UIViewController* targetController))openModeBlock;
 
 @end
 
